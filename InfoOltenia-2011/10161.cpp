@@ -56,3 +56,4 @@ int main()
 	printf("%d\n0\n",solatij+1);
 	return 0;
 }
+

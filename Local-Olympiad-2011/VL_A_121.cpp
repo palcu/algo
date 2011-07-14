@@ -200,3 +200,4 @@ int main(){
 	printf("%d\n",min(s1,s2));
 	return 0;
 }
+
