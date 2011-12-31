@@ -1,5 +1,6 @@
 Put the files on Desktop
 Run the script
+	sh create.sh new_project
 A generated CodeBlocks project will appear
 
 PS: can be runned when CodeBlocks is opened, to generate other projects
