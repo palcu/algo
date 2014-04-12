@@ -4,7 +4,9 @@ class EllysSortingTrimmer:
     def getMin(self, S, L):
         letters = list(S)
         for i in range(len(S) - L + 1):
-            letters[len(S)-L-i:len(S)-i] = sorted(letters[len(S)-L-i:len(S)-i])
+            right = len(S) - i
+            left = right - L
+            letters[left:right] = sorted(letters[left:right])
         letters = letters[0:L]
         return "".join(letters)
 
@@ -24,12 +26,12 @@ def KawigiEdit_RunTest(testNum, p0, p1, hasAnswer, p2):
 	if (hasAnswer):
 		print(str("Desired answer:"))
 		print(str("\t") + str("\"") + str(p2) + str("\""))
-	
+
 	print(str("Your answer:"))
 	print(str("\t") + str("\"") + str(answer) + str("\""))
 	if (hasAnswer):
 		res = answer == p2
-	
+
 	if (not res):
 		print(str("DOESN'T MATCH!!!!"))
 	elif ((endTime - startTime) >= 2):
@@ -39,7 +41,7 @@ def KawigiEdit_RunTest(testNum, p0, p1, hasAnswer, p2):
 		print(str("Match :-)"))
 	else:
 		print(str("OK, but is it right?"))
-	
+
 	print(str(""))
 	return res
 
@@ -115,7 +117,7 @@ if (all_right):
 		print(str("You're a stud (but some test cases were disabled)!"))
 	else:
 		print(str("You're a stud (at least on given cases)!"))
-	
+
 else:
 	print(str("Some of the test cases had errors."))
 

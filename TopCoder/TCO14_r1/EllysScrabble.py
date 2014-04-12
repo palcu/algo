@@ -2,20 +2,19 @@ import math,string,itertools,fractions,heapq,collections,re,array,bisect,random
 
 class EllysScrabble:
     def getMin(self, letters, maxDistance):
-        letters = list(letters)
-        letters = [[x, i] for x, i in enumerate(letters)]
-        pool = letters[0:maxDistance]
-        sol = []
-        for i, currentLetter in enumerate(range(maxDistance, len(letters) + maxDistance)):
+        letters = [[x, i] for x, i in enumerate(list(letters))]
+        pool, sol = letters[0:maxDistance], []
+        for i in range(len(letters)):
+            currentLetter = i + maxDistance
             if currentLetter < len(letters):
                 pool.append(letters[currentLetter])
-            fortat = [x for x in pool if x[0] == i-maxDistance]
-            if fortat:
-                fortat = fortat[0]
-                sol.append(fortat)
-                pool.remove(fortat)
+
+            forced = [x for x in pool if x[0] == i-maxDistance]
+            if forced:
+                sol.append(forced[0])
+                pool.remove(forced[0])
             else:
-                my_min = sorted(pool, key=lambda x: x[1])[0]
+                my_min = min(pool, key=lambda x: x[1])
                 sol.append(my_min)
                 pool.remove(my_min)
         sol = "".join([x[1] for x in sol])
