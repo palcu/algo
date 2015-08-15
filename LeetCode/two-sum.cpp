@@ -6,9 +6,8 @@ using namespace std;
 const int N = 10007;
 
 class Solution {
-    vector<pair<int, int> > hash[N];
-
-public:
+    vector<pair<int, int>> hash[N];
+    
     int search_for(int x) {
         int key = x % N;
         key = key > 0 ? key : -key;
@@ -27,6 +26,7 @@ public:
         hash[key].push_back(make_pair(x, pos));
     }
 
+public:
     vector<int> twoSum(vector<int>& nums, int target) {
         for (int i=0; i<nums.size(); i++) {
             int solution = search_for(target-nums[i]);
