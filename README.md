@@ -9,6 +9,7 @@ This is my collection of algorithm problems from different contests and archives
 - 3rd place at [FMI No Stress](http://www.infoarena.ro/fmi-no-stress-4/clasament) + [real contest code](/Contests/FMI-NoStress-2014)
 - 2 bronze medals at the National Olympiad of Computer Science + [code from 2013](/Contests/National-Olympiad-2013)
 - grand prize at RoTopCoder 2012 (regional contest) + [code](/Contests/RoTopCoder-2012)
+- live code from the local Olympiads in [2011](/Contests/Local-Olympiad-2011), [2012](/Contests/Local-Olympiad-2012) and [2013](/Contests/Local-Olympiad-2013)
 
 ## Online Profiles
 
